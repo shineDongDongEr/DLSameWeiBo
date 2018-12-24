@@ -6,3 +6,5 @@
 ![image](https://github.com/shineDongDongEr/DLSameWeiBo/raw/master/自定义照片浏览器.gif)
 ![image](https://github.com/shineDongDongEr/DLSameWeiBo/raw/master/自定义表情键盘.gif)
 ![image](https://github.com/shineDongDongEr/DLSameWeiBo/raw/master/自定义转场动画.gif)
+
+swift4.0最新版练手项目，iphoneX上底部忘适配，见谅
