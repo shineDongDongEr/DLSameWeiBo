@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeBtnViewController" customModule="WeiBoSwift4" customModuleProvider="target">
+            <connections>
+                <outlet property="myCollectionView" destination="eL0-CQ-oj8" id="VPh-Hl-frg"/>
+                <outlet property="myTextView" destination="H5k-ES-0qa" id="6Fw-lj-bEQ"/>
+                <outlet property="picCollectionHeightCns" destination="25C-wn-p8A" id="n7i-OZ-j5Z"/>
+                <outlet property="toolBarBottomCons" destination="V5X-mv-CvH" id="R4W-3c-Wch"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H5k-ES-0qa" customClass="ComposeTextView" customModule="WeiBoSwift4" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eL0-CQ-oj8" customClass="PickPictureCollectionView" customModule="WeiBoSwift4" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                    <color key="backgroundColor" red="0.94815230370000003" green="0.720266819" blue="0.24398507180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="25C-wn-p8A"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CLY-xo-s9U">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iN-bQ-2ZR">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="hUJ-BW-HSf"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title=" " id="uwn-25-ebg"/>
+                        <barButtonItem title="Item" style="plain" id="hGw-ks-Bxd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="JgS-SM-X1H">
+                                <rect key="frame" x="31.5" y="0.0" width="87" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="图片">
+                                    <color key="titleColor" red="0.94815230370000003" green="0.720266819" blue="0.24398507180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="pictureAddBtnClick:" destination="-1" eventType="touchUpInside" id="akH-wT-Iq4"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="xST-Sp-5gR"/>
+                        <barButtonItem style="plain" id="kev-WA-eyo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mWh-yV-6dH">
+                                <rect key="frame" x="128.5" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="@">
+                                    <color key="titleColor" red="0.94815230370000003" green="0.720266819" blue="0.24398507180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="auG-zt-PbY"/>
+                        <barButtonItem style="plain" id="c6c-fD-UPB">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oWl-pg-ODe">
+                                <rect key="frame" x="184" y="5.5" width="51" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="井">
+                                    <color key="titleColor" red="0.94815230370000003" green="0.720266819" blue="0.24398507180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GGt-5j-G1g"/>
+                        <barButtonItem style="plain" id="PGo-0Z-url">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Jv-Pi-asi">
+                                <rect key="frame" x="245" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="😁">
+                                    <color key="titleColor" red="0.94815230370000003" green="0.720266819" blue="0.24398507180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="emojClick:" destination="-1" eventType="touchUpInside" id="Qm3-n3-hB7"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="6jA-Sz-7hV"/>
+                        <barButtonItem style="plain" id="ern-fr-eMz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DeB-kg-nJ4">
+                                <rect key="frame" x="300.5" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="➕">
+                                    <color key="titleColor" red="0.94815230370000003" green="0.720266819" blue="0.24398507180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem title=" " id="Euz-9C-veh"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eL0-CQ-oj8" secondAttribute="bottom" id="6Ga-UA-ioP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H5k-ES-0qa" secondAttribute="trailing" id="Hyj-Lw-cD2"/>
+                <constraint firstItem="H5k-ES-0qa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NCX-bC-KLm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="H5k-ES-0qa" secondAttribute="bottom" id="PGl-2j-tuH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6iN-bQ-2ZR" secondAttribute="bottom" id="V5X-mv-CvH"/>
+                <constraint firstItem="eL0-CQ-oj8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ysp-1W-phj"/>
+                <constraint firstItem="6iN-bQ-2ZR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="acx-wE-79e"/>
+                <constraint firstItem="6iN-bQ-2ZR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="j9x-LB-Jdi"/>
+                <constraint firstItem="H5k-ES-0qa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kek-Cm-jyr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eL0-CQ-oj8" secondAttribute="trailing" id="nec-Uz-JaJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
